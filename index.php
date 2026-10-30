@@ -3,10 +3,12 @@
  * Frontend of downloadcontrol
  * (c) 2016 by svasti
  * last edit: 10.08.2016 02:02:36
- *
+ * 
+ * (c) 2026 by Alessandro Lin - version 1.8.0 - www.csimple.it
+ * last edit october 2026
  */
 
-define('DOWNLOADCONTROL_VERSION','1.7.2');
+define('DOWNLOADCONTROL_VERSION','1.8.0');
 if (!isset($plugin_cf['downloadcontrol']['version'])
     || $plugin_cf['downloadcontrol']['version'] != DOWNLOADCONTROL_VERSION) {
     include_once $pth['folder']['plugins'] . 'downloadcontrol/config/defaultconfig.php';
