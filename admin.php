@@ -4,8 +4,7 @@
  * Back-end of Downloadcontrol_XH
  * Copyright 2016 by svasti@svasti.de
  *
- * Last change: 10.08.2016 02:02:51
- *
+ * Copyright 2026 by Alessandro Lin -  www.cmsimple.it
  */
 
 if (!defined('CMSIMPLE_XH_VERSION')) {
@@ -311,7 +310,7 @@ function Downloadcontrol_shortcuts()
             . $ptx['file_all_versions'] . ')',$shortcut);
 
         //list all files in the downloadcontrol folder
-        $o .= Downloadcontrol_listAllFiles($basefolder, 0, $shortcut);
+        $o .= Downloadcontrol_listAllFiles($basefolder, $shortcut);
         $o .= '<input type="submit" value="' . utf8_ucfirst($tx['action']['save']) . '">'. '</form>';
     }
 	
@@ -339,8 +338,10 @@ function Downloadcontrol_radioButtons($name, $label, $shortcut)
 
 
 
-
-function Downloadcontrol_listAllFiles($folder, $i = 0, $shortcut, $subfolder = '', $warnarray = NULL)
+/**
+ * modifica. Ott 2026. mia.
+ */
+function Downloadcontrol_listAllFiles($folder,  $shortcut, $i = 0, $subfolder = '', $warnarray = NULL)
 {
     global $plugin_tx;
 
@@ -387,7 +388,7 @@ function Downloadcontrol_listAllFiles($folder, $i = 0, $shortcut, $subfolder = '
     }
     if ($dirarray) $i++;
     foreach ($dirarray as $key=>$value) {
-        $o .= Downloadcontrol_listAllFiles( $value , $i, $shortcut, $subfolderarray[$key], $warnarray);
+        $o .= Downloadcontrol_listAllFiles( $value ,  $shortcut, $i = 0, $subfolderarray[$key], $warnarray);
     }
             
     return $o . '</p>' . ($warning ? '<p class="xh_warning">' . $warning . '</p>' : '');
