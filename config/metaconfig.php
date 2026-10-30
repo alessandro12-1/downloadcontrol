@@ -1,5 +1,6 @@
 <?php
 
+$plugin_mcf['downloadcontrol']['downloadcontrol_base_folder']="";
 $plugin_mcf['downloadcontrol']['email_send']="bool";
 $plugin_mcf['downloadcontrol']['email_to']="string";
 $plugin_mcf['downloadcontrol']['email_from']="string";
@@ -23,5 +24,3 @@ $plugin_mcf['downloadcontrol']['version']="hidden";
 $plugin_mcf['downloadcontrol']['backend_counter_order']="enum:alphabet,numbers";
 $plugin_mcf['downloadcontrol']['sync_dont_change_dlcounter_log']="bool";
 $plugin_mcf['downloadcontrol']['get_anonym_Ip']="bool";
-
-?>
