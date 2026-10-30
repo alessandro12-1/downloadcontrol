@@ -28,5 +28,3 @@ $plugin_cf['downloadcontrol']['password']="";
 $plugin_cf['downloadcontrol']['separator_before_version_endings']="_";
 $plugin_cf['downloadcontrol']['sync_dont_change_dlcounter_log']="true";
 $plugin_cf['downloadcontrol']['get_anonym_Ip']="true";
-
-?>
